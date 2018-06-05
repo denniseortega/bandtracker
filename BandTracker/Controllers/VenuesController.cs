@@ -8,8 +8,8 @@ namespace BandTrackerApp.Controllers
 {
   public class VenuesController : Controller
   {
-    [HttpGet("/venues/new")]
-    public ActionResult PatientForm()
+    [HttpGet("/venues")]
+    public ActionResult VenueForm()
     {
       return View();
     }

@@ -15,6 +15,13 @@ namespace BandTrackerApp.Controllers
       return View(bands);
     }
 
+    [HttpGet("/bands/list")]
+    public ActionResult BandsList()
+    {
+      List<Band> bands = Band.GetAll();
+      return View (bands);
+    }
+
     [HttpGet("/bands/new")]
     public ActionResult BandForm()
     {
