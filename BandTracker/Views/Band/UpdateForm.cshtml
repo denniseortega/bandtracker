@@ -9,9 +9,9 @@
   <body>
   <h1>Venues</h1>
     <nav>
-      <a href="/home">Home</a>
+      <a href="/">Home</a>
     </nav>
-    <h2>Edit Band: @Model.GetDescription()</h2>
+    <h2>Edit Band @Model.GetDescription()</h2>
       <form action="/bands/@Model.GetId()/update" method="post">
         <label for="name">New Band:</label>
         <input type="text" name="newname" value="@Model.GetDescription()">
