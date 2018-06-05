@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+    <meta charset="utf-8">
+  <title>Band Tracker</title>
+  </head>
+  <body>
+    <h1>Bands</h1>
+      <nav>
+        <a href="/home">Home</a> |
+        <a href="/bands/list">Bands List</a> |
+        <a href="/venues/list">Venues List</a>
+      </nav>
+      <h2>Band Details</h2>
+       <p>Name: @Model.GetName()</p>
+       <p>Show Date: @Model.GetShowDate()</p>
+
+     <form action="band/@Model.GetId()/delete" method="post">
+       <button type="submit" class="btn btn-danger">Delete Band</button>
+     </form>
+  </body>
+</html>
