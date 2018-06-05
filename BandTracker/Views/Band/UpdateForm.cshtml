@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+    <meta charset="utf-8">
+  <title>Band Tracker</title>
+  </head>
+  <body>
+  <h1>Venues</h1>
+    <nav>
+      <a href="/home">Home</a>
+    </nav>
+    <h2>Edit Band: @Model.GetDescription()</h2>
+      <form action="/bands/@Model.GetId()/update" method="post">
+        <label for="name">New Band:</label>
+        <input type="text" name="newname" value="@Model.GetDescription()">
+        <button type="submit">Edit</button>
+      </form>
+  </body>
+</html>
